@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bleach Character Guessing Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>Bleach Character Guessing Game</h1>
+    <div class="autocomplete">
+      <input
+        type="text"
+        id="character-input"
+        placeholder="Guess the character..."
+        oninput="showSuggestions()"
+      />
+    </div>
+    <div id="suggestions"></div>    
+    <div class="guess-results">
+      <table>
+        <thead>
+          <tr>
+            <th>Guess</th>
+            <th>Gender</th>
+            <th>Species</th>
+            <th>Bankai</th>
+            <th>Position</th>
+            <th>Debut Arc</th>
+            <th>Height</th>
+          </tr>
+        </thead>
+        <tbody id="guess-table">
+          <!-- Guesses will appear here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('back.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+  }
+  
+  .game-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 30px;
+    width: 60%;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  h1 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #4caf50;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  td {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .correct {
+    background-color: green;
+  }
+  
+  .partial {
+    background-color: orange;
+  }
+  
+  .wrong {
+    background-color: red;
+  }
+  
+  .autocomplete {
+    position: relative;
+  }
+  
+  .up-arrow {
+    color: white;
+  }
+  
+  .down-arrow {
+    color: white;
+  }
+
+  .wrong {
+    background-color: red;
+  }
+  
+  .up-arrow::after {
+    content: '↑';
+    color: white;
+    margin-left: 5px;
+  }
+  
+  .down-arrow::after {
+    content: '↓';
+    color: white;
+    margin-left: 5px;
+  }
+  
+  
+  #suggestions {
+    position:fixed;
+    background-color: #222;
+    border: 1px solid #ddd;
+    max-height: 350px;
+    overflow-y: auto;
+    width: 50%;
+    z-index: 1000;
+    color: white;
+  }
+  
+  #suggestions div {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #suggestions div:hover {
+    background-color: #4caf50;
+  }
+  
+  .congratulations-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    z-index: 9999; /* Ensure it's on top of everything */
+  }
+  
+  .congratulations-box h2 {
+    color: #4caf50;
+    margin-bottom: 10px;
+  }
+  
+  .congratulations-box p {
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .congratulations-box button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  #suggestions div {
+    padding: 10px;
+    display: flex;
+    align-items: center;  /* Aligns the image and text vertically */
+    cursor: pointer;
+  }
+  .image-container {
+  position: relative;
+  width: 60px; /* Adjust based on the image size you prefer */
+  height: auto;
+}
+
+.character-image {
+  width: 100%; /* This makes sure the image fills the container */
+  height: auto;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1; /* Show the overlay with the character name when hovered */
+}
+.image-container {
+  position: relative;
+  width: 60px; /* You can adjust this width if needed */
+  height: 60px; /* Fixed height for all images */
+  overflow: hidden; /* Ensures that images that exceed this height are clipped */
+}
+
+.character-image {
+  width: auto; /* Auto width to maintain aspect ratio */
+  height: 100%; /* Uniform height for all images */
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1; /* Show the overlay with the character name when hovered */
+}
