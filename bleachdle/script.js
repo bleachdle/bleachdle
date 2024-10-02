@@ -736,7 +736,7 @@ const characters = [
   position: "Lieutenant",
   debutArc: "Soul Society Arc",
   height: "181 cm",
-  image: "images/shuhei.webp"
+  image: "images/shunei.webp"
 },
 
 {

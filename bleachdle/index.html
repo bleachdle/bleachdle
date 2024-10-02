@@ -19,23 +19,26 @@
     </div>
     <div id="suggestions"></div>    
     <div class="guess-results">
-      <table>
-        <thead>
-          <tr>
-            <th>Guess</th>
-            <th>Gender</th>
-            <th>Species</th>
-            <th>Bankai</th>
-            <th>Position</th>
-            <th>Debut Arc</th>
-            <th>Height</th>
-          </tr>
-        </thead>
-        <tbody id="guess-table">
-          <!-- Guesses will appear here -->
-        </tbody>
-      </table>
+      <div class="table-wrapper"> <!-- Add this wrapper -->
+        <table>
+          <thead>
+            <tr>
+              <th>Guess</th>
+              <th>Gender</th>
+              <th>Species</th>
+              <th>Bankai</th>
+              <th>Position</th>
+              <th>Debut Arc</th>
+              <th>Height</th>
+            </tr>
+          </thead>
+          <tbody id="guess-table">
+            <!-- Guesses will appear here -->
+          </tbody>
+        </table>
+      </div> <!-- Close wrapper -->
     </div>
+    
   </div>
   <script src="script.js"></script>
 </body>
